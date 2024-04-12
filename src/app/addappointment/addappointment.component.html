@@ -1,0 +1,47 @@
+<div id="outPopUp" class="">
+    <div class="">
+  
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errormsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  
+          <!--to show success alert-->
+          <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successmsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <br><br>
+          <div align="center">
+            <img  src="/assets/logo.jpg" style="height: 100px;">
+      <br><br>
+        <form  [formGroup]="patientForm" >
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control" formControlName="patientName" placeholder="Patient Name">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="patientPhone" placeholder="Patient Phone Number">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="patientaddress" placeholder="Patient Address">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="date" class="form-control"  formControlName="appointmentdate" placeholder="Appointment Date">
+          </div>
+          <br>
+          <div align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="clinicSubmit()">
+      <button class="btn btn-primary">Add Patient</button>
+          </div>
+  
+  
+  
+  
+        </form>
+  
+      </div>
+    </div>

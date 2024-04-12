@@ -1,0 +1,48 @@
+<div class="container">
+
+
+    <!--showmessage alert for delete-->
+    <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{successmsg}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <br><br>
+    <div align="center">
+      <img  src="/assets/logo.jpg" style="height: 100px;">
+  <br><br>
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-primary">
+          <td align= "center" scope="col">APPOINTMENT NO.</td>
+          <td align= "center" scope="col">PATIENT NAME</td>
+          <td align= "center" scope="col">PATIENT PHONE NUMBER</td>
+          <td align= "center" scope="col">PATIENT ADDRESS</td>
+          <td align= "center" scope="col">APPOINTMENT DATE</td>
+  
+          <td scope="col"></td>
+          <td align="center" scope="col">UPDATE</td>
+          
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = 'let us of listData'>
+          <td align= "center"scope="row">{{us.appointment_no}}</td>
+          <td align= "center">{{us.patientName}}</td>
+          <td align= "center">{{us.patientPhone}}</td>
+          <td align= "center">{{us.patientaddress}}</td>
+          <td align= "center">{{us.appointmentdate}}</td>
+  
+          <td></td>
+          <td>
+  
+            <button class="btn btn-outline-dark" (click)="deleteId(us.appointment_no)">REMOVE</button>
+            &nbsp;
+            <button class="btn btn-outline-primary" [routerLink]="['/updateappointment', us.appointment_no]">EDIT 📝</button>
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+  
+  </div>

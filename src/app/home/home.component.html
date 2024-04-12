@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutiara Clinic</title>
+    <link rel="stylesheet" href="home.component.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Mutiara Clinic</h1>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to Mutiara Clinic, where your health and well-being are our top priorities...</p>
+        <a class="nav-link" [routerLink]="['/aboutus']" routerLinkActive="router-link-active" class="btn">Learn More</a>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container">
+        <h2>Frequently Asked Question</h2>
+        <p>At Mutiara Clinic, we offer a wide range of medical services to meet your needs...</p>
+        <a class="nav-link" [routerLink]="['/faq']" routerLinkActive="router-link-active" class="btn">FAQ</a>
+    </div>
+</section>
+
+<section id="booking">
+    <div class="container">
+        <h2>Booking with Us</h2>
+        <p>You want to schedule an appointment? Book with us today...</p>
+        <a class="nav-link" [routerLink]="['/addappointment']" routerLinkActive="router-link-active" class="btn">Appointment</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Mutiara Clinic. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
